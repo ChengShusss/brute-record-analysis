@@ -80,7 +80,7 @@ func processLine(line string) {
 	}
 	record := &Record{
 		Date:       fields[0],
-		Time:       fields[1],
+		Time:       fields[1][:8],
 		RemoteAddr: fields[2],
 		Client:     fields[3],
 		User:       fields[4],
